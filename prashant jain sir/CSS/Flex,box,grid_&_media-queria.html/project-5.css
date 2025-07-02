@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav { 
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+img{
+    margin: 5px;
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+   
+
+}
+
+#shivni_container{
+    margin: 5px;
+    padding: 5px;
+    border: 3px solid;
+    display: flex;
+    justify-content: center;
+}
+
+#box_container{
+    margin: 5px;
+    padding: 5px;
+    border: 3px solid;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    margin: 5px;
+    padding: 5px;
+    border: 3px solid;
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+}
+
+#box2{
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+
+#media_box{
+    height: 50px;
+    width: 50px;
+    border: 3px solid;
+    background-color: green;
+}
+
+@media screen and (min-width: 400px) {
+    #media_box{
+        background-color: blue;
+    }
+    
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    #media_box{
+        background-color: red;
+    }
+    
+}

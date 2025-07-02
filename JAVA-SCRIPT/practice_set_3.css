@@ -1,0 +1,15 @@
+.class_name{
+    background-color: red;
+}
+
+
+#id_name{
+    background-color: aqua;
+}
+
+.first_button{
+    border-radius: 10px;
+}
+.second_button{
+    border-radius: 10px;
+}

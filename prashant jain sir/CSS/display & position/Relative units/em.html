@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units- Percentage %</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #first{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+
+        /* percentage is base on parent size */
+        /* when parent is not present then parent consider body or document */
+        #second{
+            height: 60%;
+            width: 50%;
+            /* em is base on parent but it is multiplying parent size */
+            font-size: 2em; /* 2em is double of parent size*/
+            background-color: royalblue;
+        }
+        
+    </style>
+</head>
+<body>
+    Body
+    <div id="first">
+        First div
+        <div id="second">   
+            Second div
+        </div>
+    </div>
+</body>
+</html>

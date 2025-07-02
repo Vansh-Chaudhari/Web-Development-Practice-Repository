@@ -1,0 +1,24 @@
+
+h1{
+    color:red;
+}
+
+div{
+    color: red;
+}
+h3{
+    color: saddlebrown;
+}
+/*selector types*/
+
+#First{
+    color: skyblue;
+}
+
+.First{
+    color: orange;
+}
+
+#div1,#div2{
+    color: fuchsia;
+}

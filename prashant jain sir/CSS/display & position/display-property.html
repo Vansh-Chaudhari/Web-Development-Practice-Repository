@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            background-color: olivedrab;
+
+            /* display attribute block element is by default applied */
+            /* display: block; */
+
+            /* When inline element is applied then given height & width are not applied only content required place   */
+            /* display: inline; */
+
+            /* inline element not applied prgrammer given property like height & width for this problem inline-block element used as follows */
+            /* display: inline-block; */
+        }
+
+            #box1{
+                /* hidden element is hide content but required is not remove */
+                /* visibility: hidden; */
+
+                /* none element delete content with there place which is not possible in hidden element*/
+                /* display: none; */
+            }
+        
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box 1</div>
+    <div id="box2" class="box">Box 2</div>
+    
+</body>
+</html>

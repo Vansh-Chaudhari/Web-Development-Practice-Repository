@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin collapse</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            padding: 5px;
+        }
+
+        #first {
+            margin: 5px 5px 15px 5px;
+            background-color: red;
+
+        }
+
+        #second {
+            margin: 55px 5px 5px 5px;
+            background-color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="box">First</div>
+    <div id="second" class="box">Second</div>
+
+</body>
+
+</html>

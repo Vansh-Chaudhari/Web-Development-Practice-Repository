@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition property</title>
+    <style>
+        .psedo {
+            height: 25;
+            width: 150px;
+            background-color: lightgreen;
+            border: 2px solid;
+            border-radius: 10px;
+            
+            /* TRANSITION PROPERTY */
+            /* transition-property: all; */
+            /* transition-duration: 1s; */
+            /* transition-timing-function: steps(3); */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-delay: 1s; */
+
+            /* short hand for transition */
+            transition: all 1s ease-in-out 0s;
+        }
+
+        .psedo:hover {
+            height: 30px;
+            width: 200px;
+            background-color: forestgreen;
+        }
+
+        .psedo:active {
+            height: 30px;
+            width: 150px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <button class="psedo">Learning Pseudo</button>
+    
+</body>
+</html>

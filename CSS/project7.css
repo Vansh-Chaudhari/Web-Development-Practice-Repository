@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#progress_bar{ 
+    margin: 3%;
+    height: 20px;
+    width: 90%;
+    border: 2px solid;
+    border-radius: 20px;
+    position: relative;
+    right: 10px;    
+    background-color: lightgray;
+}
+
+#bar{
+    width: 50%;
+    height: 100%;
+    background-color: darkmagenta;
+    border-radius: 20px;
+    animation: animated_bar 3s 5;
+}
+
+@keyframes animated_bar{
+    0%{width:0%;}
+    90%{width:95%;}
+    95%{width:70%;}
+    100%{width: 100%;}    
+}

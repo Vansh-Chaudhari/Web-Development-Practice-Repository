@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text decortion</title>
+    <style>
+        .head{
+            background-color: yellowgreen;
+        }
+
+        #head1{
+            text-decoration: line-through;
+        }
+
+        #head2{
+            text-decoration: underline;
+        }
+
+        #head3{
+            text-decoration: overline;
+        }
+
+        #link{
+            /* for removing underline  */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head1" class="head">This is my first heading</h1>
+    <h1 id="head2" class="head">This is my second heading</h1>
+    <h1 id="head3" class="head">This is my three heading</h1> <hr>
+    
+    <!-- # is denoted to make self link without link to another  -->
+    <a href="#">This is link</a> <hr>
+
+    <a id="link" href="#">This is a link</a>
+</body>
+</html>

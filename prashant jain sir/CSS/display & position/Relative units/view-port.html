@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View port</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #first {
+            height: 50vh;
+            width:  50vw;
+            background-color: red;
+        }
+
+        #second {
+            height: 50px;
+            /*view height is nothing but percntage of size of document height*/
+            width: 50px;
+            /*view width is nothing but percntage of size of document width*/
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first">
+        Box 1
+        <div id="second">
+            Box 2
+        </div>
+    </div>
+
+</body>
+
+</html>
