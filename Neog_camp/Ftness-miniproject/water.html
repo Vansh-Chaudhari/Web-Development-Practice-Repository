@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Water Watcher</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">BMI Buddy</a></li>
+          <li><a href="calorie.html">Calorie Compass</a></li>
+          <li><a href="water.html">Water Watcher</a></li>
+          <li><a href="sankhya.html">Step Sankhya</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Water Watcher</h1>
+        <p>claculate your water intake</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <p>Set your weight and season to see your Water Intake</p>
+      <section>
+        <div>
+          <input
+            id="weight_id"
+            type="number"
+            placeholder="Enter a weight in kgs"
+            required
+          />
+
+          <select id="season_id">
+            <option value="summer">Summer</option>
+            <option value="winter">Winter</option>
+            <option value="mansoon">Monsoon</option>
+          </select>
+
+          <button id="btn_id">Suggest Water Intake</button>
+        </div>
+      </section>
+      <section>
+        <p id="result_id"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function finalWaterIntake(weight, season) {
+        if (weight < 50) {
+          waterIntake = 1.5;
+        } else if (weight <= 70) {
+          waterIntake = 2.0;
+        } else {
+          waterIntake = 2.5;
+        }
+
+        if (season === "summer") {
+          finalWaterConsume = waterIntake + 0.5;
+        } else if (season === "winter") {
+          finalWaterConsume = waterIntake + 0.3;
+        } else {
+          finalWaterConsume = waterIntake;
+        }
+        return finalWaterConsume;
+      }
+
+      function calWaterIntake() {
+        const weightElement = document.getElementById("weight_id");
+        const seasonElement = document.getElementById("season_id");
+        const resultElement = document.getElementById("result_id");
+        const weight = parseInt(weightElement.value);
+        const season = seasonElement.value;
+        if (weight <= 0) {
+          resultElement.innerText = "Enter a valid weight.";
+          return;
+        }
+        const finalBaseLiters = finalWaterIntake(weight, season);
+        resultElement.innerText = finalBaseLiters + "L of water daily.";
+      }
+
+      const btnElement = document.getElementById("btn_id");
+      btnElement.addEventListener("click", calWaterIntake);
+    </script>
+  </body>
+</html>

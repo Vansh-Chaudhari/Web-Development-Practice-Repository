@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kurrency Konvertor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Paise Planner</a></li>
+          <li><a href="convertor.html">Konvertor Kurrency</a></li>
+          <li><a href="discount-col.html">Discount Deducer</a></li>
+          <li><a href="bill-butwara.html">Bill Butwara</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Kurrency Konvertor</h1>
+        <p>Convert from USD to INR</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <section>
+        <div>
+          <input
+            id="usdInput"
+            type="number"
+            placeholder="Enter amount in USD"
+            required
+          />
+          <button id="btn_id">Convert to INR</button>
+        </div>
+      </section>
+      <section>
+        <p id="result"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      const btn_idElement = document.getElementById("btn_id");
+
+      function convertorFunction(usdValue) {
+        const conversionRate = 83;
+        const inr_result = usdValue * conversionRate;
+        return inr_result.toFixed(2);
+      }
+
+      function handleButtonClicked() {
+        const usdInputElement = document.getElementById("usdInput");
+        const usd = usdInputElement.value;
+        const resultElement = document.getElementById("result");
+        const inr = convertorFunction(usd);
+        resultElement.innerText = usd + "USD converted into INR is:" + inr;
+      }
+
+      btn_idElement.addEventListener("click", handleButtonClicked);
+    </script>
+  </body>
+</html>

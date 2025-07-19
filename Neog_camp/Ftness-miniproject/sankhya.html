@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Step Sankhya</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">BMI Buddy</a></li>
+          <li><a href="calorie.html">Calorie Compass</a></li>
+          <li><a href="water.html">Water Watcher</a></li>
+          <li><a href="sankhya.html">Step Sankhya</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Step Sankhya</h1>
+        <p>claculate your daily steps</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <p>
+        Set your current weight, goal weight and time period to see your daily
+        steps
+      </p>
+      <section>
+        <div>
+          <input
+            id="currentWeightId"
+            type="number"
+            placeholder="Enter a current weight in kgs"
+            required
+          />
+
+          <input
+            id="goalWeightId"
+            type="number"
+            placeholder="Enter a goal weight in kgs"
+            required
+          />
+
+          <input
+            id="monthsId"
+            type="number"
+            placeholder="Enter a time period in months"
+            required
+          />
+
+          <button id="btnId">Calculate Steps</button>
+        </div>
+      </section>
+      <section>
+        <p id="resultId"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function calStepsSankhya(currentWeight, goalWeight, months) {
+        kgToLose = currentWeight - goalWeight;
+        totalCaloriesToBurn = kgToLose * 7700;
+
+        totalDays = months * 30;
+
+        dailyCaloriesToBurn = totalCaloriesToBurn / totalDays;
+
+        stepsPerDay = dailyCaloriesToBurn / 0.04;
+        finalSteps = Math.round(stepsPerDay);
+
+        return finalSteps;
+      }
+
+      function stepsSankhya() {
+        const currentWeightElement = document.getElementById("currentWeightId");
+        const goalWeightElement = document.getElementById("goalWeightId");
+        const monthsElement = document.getElementById("monthsId");
+        const resultElement = document.getElementById("resultId");
+
+        const currentWeight = parseFloat(currentWeightElement.value);
+        const goalWeight = parseFloat(goalWeightElement.value);
+        const months = parseInt(monthsElement.value);
+
+        if (goalWeight > currentWeight || months <= 0) {
+          resultElement.innerText =
+            "Please enter a valid goal weight and time period.";
+          return;
+        } else {
+          const finalSteps = calStepsSankhya(currentWeight, goalWeight, months);
+
+          resultElement.innerText =
+            "To reach your goal,walk at least " +
+            finalSteps +
+            " steps per day for " +
+            months +
+            " months.";
+        }
+      }
+
+      const btnElement = document.getElementById("btnId");
+      btnElement.addEventListener("click", stepsSankhya);
+    </script>
+  </body>
+</html>

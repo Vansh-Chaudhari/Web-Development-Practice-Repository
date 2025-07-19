@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Average Speed Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="container">
+      <nav>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"><h5>TripeWise Tools</h5></a>
+            </li>
+          </ul>
+        </nav>
+        <ul>
+          <li><a href="averageSpeed.html">Average Speed</a></li>
+          <li><a href="eta.html">ETA</a></li>
+          <li><a href="fuelCost.html">Fuel Cost</a></li>
+          <li><a href="itineraryCost.html">Itinerary Cost</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Average Speed Calculator</h1>
+      <hr />
+      <fieldset>
+        <p>Distance (km):</p>
+          <input
+            id="distanceId"
+            type="number"
+            placeholder="Enter distance in km"
+            required
+          />
+        </p>
+
+        <p>Time (hours):</p>
+        <input
+          id="timeId"
+          type="number"
+          placeholder="Enter time in hours"
+          required
+        />
+        <input id="btnId" type="submit" value="Calculate Speed" />
+      </fieldset>
+      <p id="resultId"></p>
+    </main>
+
+    <footer class="container">
+      <small>
+        Go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function calAverageSpeed() {
+        const distanceElement = document.getElementById("distanceId");
+        const timeElement = document.getElementById("timeId");
+        const resultElement = document.getElementById("resultId");
+        const distance = parseFloat(distanceElement.value);
+        const time = parseFloat(timeElement.value);
+
+        if (distance <= 0 || time <= 0) {
+          resultElement.innerText = "Please Enter valid inputs";
+          return;
+        } else {
+          const speed = distance / time;
+          resultElement.innerText = "Average Speed " + speed.toFixed(2) + " km/h";
+        }
+      }
+
+      btnElement = document.getElementById("btnId");
+      btnElement.addEventListener("click", calAverageSpeed);
+    </script>
+  </body>
+</html>

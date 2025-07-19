@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itinerary Cost Estimator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="container">
+      <nav>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"><h5>TripeWise Tools</h5></a>
+            </li>
+          </ul>
+        </nav>
+        <ul>
+          <li><a href="averageSpeed.html">Average Speed</a></li>
+          <li><a href="eta.html">ETA</a></li>
+          <li><a href="fuelCost.html">Fuel Cost</a></li>
+          <li><a href="itineraryCost.html">Itinerary Cost</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Itinerary Cost Estimator</h1>
+      <hr />
+      <fieldset>
+        <p>Transport Cost:</p>
+        <input
+          id="transportCostId"
+          type="number"
+          placeholder="Enter trasport cost"
+          required
+        />
+        <p>Hotel Type:</p>
+        <select id="hotelTypeId">
+          <option value="budget">Budget</option>
+          <option value="standard">Standard</option>
+          <option value="luxury">Luxury</option>
+        </select>
+
+        <p>Food Cost:</p>
+        <input
+          id="foodCostId"
+          type="number"
+          placeholder="
+        Enter food cost"
+          required
+        />
+
+        <p>Activities Cost</p>
+        <input
+          id="activitiesCostId"
+          type="number"
+          placeholder="
+        Enter activities cost"
+          required
+        />
+
+        <input id="btnId" type="submit" value="Calculate Cost" />
+      </fieldset>
+      <p id="resultId"></p>
+    </main>
+
+    <footer class="container">
+      <small>
+        Go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function calItineraryCost() {
+        const transportCostElement = document.getElementById("transportCostId");
+        const hotelTypeElement = document.getElementById("hotelTypeId");
+        const foodCostElement = document.getElementById("foodCostId");
+        const activitiesCostElement =
+          document.getElementById("activitiesCostId");
+        const resultElement = document.getElementById("resultId");
+
+        const transportCost = parseFloat(transportCostElement.value);
+        const hotelType = hotelTypeElement.value;
+        const foodCost = parseFloat(foodCostElement.value);
+        const activitiesCost = parseFloat(activitiesCostElement.value);
+
+        if (transportCost <= 0 || foodCost <= 0 || activitiesCost <= 0) {
+          resultElement.innerText = "Please enter valid inputs";
+          return;
+        } else {
+          const sum = transportCost + foodCost + activitiesCost;
+
+          if (hotelType === "budget") {
+            const cost = 1000;
+            const finalSum = sum + cost;
+            resultElement.innerText =
+              " Total Trip Cost: ₹" +
+              finalSum.toFixed(2) +
+              "(Hotel cost:  ₹" +
+              cost +
+              ")";
+          } else if (hotelType === "standard") {
+            const cost = 2500;
+            const finalSum = sum + cost;
+            resultElement.innerText =
+              " Total Trip Cost: ₹" +
+              finalSum.toFixed(2) +
+              "(Hotel cost:  ₹" +
+              cost +
+              ")";
+          } else {
+            const cost = 3000;
+            const finalSum = sum + cost;
+            resultElement.innerText =
+              " Total Trip Cost: ₹" +
+              finalSum.toFixed(2) +
+              " (Hotel cost:  ₹" +
+              cost +
+              ")";
+          }
+        }
+      }
+
+      const btnElement = document.getElementById("btnId");
+      btnElement.addEventListener("click", calItineraryCost);
+    </script>
+  </body>
+</html>

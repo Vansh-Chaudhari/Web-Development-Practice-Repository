@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Whatsapp Link Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">SmartMarketer Tools</a>
+            </li>
+          </ul>
+        </nav>
+        <ul>
+          <li><a href="wami.html">WAMI Link</a></li>
+          <li><a href="twitter.html">Tweet Link Generator</a></li>
+          <li><a href="github.html">GitHub Link</a></li>
+        </ul>
+      </nav>
+      <hr />
+      <hgroup>
+        <h1>WAMI Link Generator</h1>
+        <p>Create a custom WhatApp message and send it your target audience.</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <fieldset>
+        <input
+          type="phone"
+          id="whatsappNumberInput"
+          placeholder="Enter Whatsapp Phone Number"
+        />
+
+        <select id="messageId">
+          <option value="Hi! I'm interested in your product.">
+            Hi! I'm interested in your product.
+          </option>
+          <option value="Hello, can we connect regarding a seervice?">
+            Hello, can we connect regarding a seervice?
+          </option>
+          <option value="Please share more details.">
+            Please share more details.
+          </option>
+        </select>
+        <input type="submit" id="btnInput" value="Generate WAMI Link" />
+      </fieldset>
+      <p id="app"></p>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function generateWamaindMessageLink() {
+        const inputElement1 = document.getElementById(
+          "whatsappNumberInput"
+        ).value;
+        const inputElement2 = document.getElementById("messageId").value;
+        const appElement = document.getElementById("app");
+
+        const encodedMessage = encodeURIComponent(inputElement2);
+        const result =
+          "https://wa.me/+91" + inputElement1 + "?text=" + encodedMessage;
+        appElement.innerText = result;
+      }
+
+      const btnElement = document.getElementById("btnInput");
+      btnElement.addEventListener("click", generateWamaindMessageLink);
+    </script>
+  </body>
+</html>

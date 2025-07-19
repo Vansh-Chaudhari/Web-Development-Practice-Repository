@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Your place to get started with semantic web development"
+    />
+    <title>Calorie Compass</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">BMI Buddy</a></li>
+          <li><a href="calorie.html">Calorie Compass</a></li>
+          <li><a href="water.html">Water Watcher</a></li>
+          <li><a href="sankhya.html">Step Sankhya</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Calorie Compass</h1>
+        <p>claculate your calorieI</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <p>Set your age,gender and activity level to see your require calorie</p>
+      <section>
+        <div>
+          <input
+            id="age_id"
+            type="number"
+            placeholder="Enter a age in years"
+            required
+          />
+
+          <select id="gender_id">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+
+          <select id="activity_id">
+            <option value="sedentry">Sedentry</option>
+            <option value="light">light</option>
+            <option value="Active">Active</option>
+          </select>
+
+          <button id="btn_id">Estimate Calories</button>
+        </div>
+      </section>
+      <section>
+        <p id="result_id"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      function genderCheck(gender, activity) {
+        if (gender === "male") {
+          return maleCalories(activity);
+        } else {
+          return femaleCalories(activity);
+        }
+      }
+
+      function maleCalories(activity) {
+        if (activity === "sedentry") {
+          calories = "2000 kcal";
+        } else if (activity === "light") {
+          calories = "2200 kcal";
+        } else {
+          calories = "2500 kcal";
+        }
+        return calories;
+      }
+
+      function femaleCalories(activity) {
+        if (activity === "sedentry") {
+          calories = "1800 kcal";
+        } else if (activity === "light") {
+          calories = "2000 kcal";
+        } else {
+          calories = "2200 kcal";
+        }
+        return calories;
+      }
+
+      function calCalories() {
+        const ageElement = document.getElementById("age_id");
+        const genderElement = document.getElementById("gender_id");
+        const activityElement = document.getElementById("activity_id");
+        const resultElement = document.getElementById("result_id");
+
+        const age = parseInt(ageElement.value);
+        const gender = genderElement.value;
+        const activity = activityElement.value;
+
+        if (age <= 0) {
+          resultElement.innerText = "Please enter a valid age";
+          return;
+        }
+
+        const calories = genderCheck(gender, activity);
+
+        resultElement.innerText = "Estimate Calories :" + calories;
+      }
+
+      const btnElement = document.getElementById("btn_id");
+      btnElement.addEventListener("click", calCalories);
+    </script>
+  </body>
+</html>

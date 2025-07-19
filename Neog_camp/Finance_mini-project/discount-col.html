@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Descount Deducer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Paise Planner</a></li>
+          <li><a href="convertor.html">Konvertor Kurrency</a></li>
+          <li><a href="discount-col.html">Discount Deducer</a></li>
+          <li><a href="bill-butwara.html">Bill Butwara</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>Discount Deducer</h1>
+        <p>Let's see how much you saved</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <section>
+        <p>
+          Enter the total amount and discount percentage to see the final price
+          and the amount saved!
+        </p>
+        <section>
+          <div class="grid">
+            <input
+              id="total_id"
+              type="number"
+              placeholder="Enter total amount"
+              aria-label="Total amount"
+              required
+            />
+  
+            <input
+              type="number"
+              id="discount_id"
+              placeholder="Enter discount percentage"
+              aria-label="Discount percentage"
+            />
+           
+          </div>
+           <button id="btn_id">Calcualate Discount</button>
+      </section>
+      <section>
+        <p id="result"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+    <script>
+      const btnElement = document.getElementById("btn_id");
+    
+      function calculateDiscount(total, discountPercentage) {
+        const savedAmount = (total * discountPercentage) / 100;
+        const finalPrice = total - savedAmount;
+        return {
+          savedAmount: savedAmount.toFixed(2),
+          finalPrice: finalPrice.toFixed(2),
+        };
+      }
+    
+      function processDiscount() {
+        const totalInputElement = document.getElementById("total_id");
+        const discountInputElement = document.getElementById("discount_id"); 
+    
+        const total = totalInputElement.value;
+        const discountPercentage = discountInputElement.value;
+    
+        const result = calculateDiscount(total, discountPercentage);
+    
+        const resultElement = document.getElementById("result");
+        resultElement.innerText = "You saved ₹" + result.savedAmount + ". Final price is ₹" + result.finalPrice + ".";
+      }
+    
+      btnElement.addEventListener("click", processDiscount);
+    </script>  
+  </body>
+</html>
