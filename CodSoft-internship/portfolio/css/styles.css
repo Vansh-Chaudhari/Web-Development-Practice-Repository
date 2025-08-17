@@ -299,6 +299,10 @@ nav {
 }
 
 .projectLinks {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin-top: 10px;
 	font-size: 22px;
 }
@@ -306,7 +310,7 @@ nav {
 .projectLinks a {
 	color: #01aaff;
 	text-decoration: none;
-	margin: 0 5px;
+	margin: 5px 5px;
 	transition: color 0.3s ease;
 }
 
@@ -544,8 +548,8 @@ nav {
 	}
 
 	.socialIcon {
-	width: 24px;
-	height: 24px;
+		width: 24px;
+		height: 24px;
 	}
 }
 
@@ -604,15 +608,6 @@ nav {
 
 	.emoji {
 		font-size: 1rem;
-	}
-
-	.projectLinks {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-top: 10px;
-		font-size: 22px;
 	}
 
 	.skillTitleContainer {
