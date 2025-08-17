@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #13171f;
+	font-family: Arial, sans-serif;
+}
+
+.hrClass {
+	border-color: #202632;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.mainContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+nav {
+	background-color: #13171f;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.navLinks {
+	display: flex;
+	gap: 2rem;
+}
+
+.navLinks ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	list-style: none;
+}
+
+.navLinks a {
+	color: #01aaff;
+	text-decoration: none;
+	font-size: 1.5em;
+	transition: color 0.3s;
+}
+
+.navLinks a:hover {
+	color: #00f7ff;
+}
+
+.menuToggle {
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: #01aaff;
+	display: none;
+	cursor: pointer;
+}
+
+.menuToggle:hover {
+	color: #00f7ff;
+}
+
+.mobileMenu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #10141b;
+	z-index: 1000;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.mobileMenu a {
+	color: #01aaff;
+	text-decoration: none;
+	font-size: 1.5em;
+	margin: 20px;
+	transition: color 0.3s;
+}
+
+.navClose ul {
+	list-style: none;
+}
+
+.navClose a:hover {
+	color: #00f7ff;
+}
+
+.mobileMenu .navClose ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	list-style: none;
+}
+
+.closeBtn {
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: #01aaff;
+	cursor: pointer;
+	z-index: 1100;
+}
+
+.closeBtn:hover {
+	color: #00f7ff;
+}
+
+.profileTopLeft {
+	margin-bottom: 1.5em;
+}
+
+.profileTopLeft img {
+	width: 4.5em;
+	height: 4.5em;
+	border-radius: 50%;
+	margin-left: 1.1rem;
+}
+
+.profileInner {
+	display: flex;
+	flex-direction: column;
+	margin-left: 80px;
+	margin-top: -60px;
+}
+
+#name {
+	font-size: 2em;
+	color: #fff;
+	margin-left: 1.1rem;
+}
+
+.proffesion {
+	color: #7b8495;
+	font-size: 1.2em;
+	margin-left: 1.1rem;
+}
+
+.introduction {
+	margin-top: 10px;
+	font-size: 22px;
+	text-align: center;
+	color: floralwhite;
+}
+
+@media screen and (max-width: 768px) {
+	.navLinks {
+		display: none;
+	}
+
+	.menuToggle {
+		display: block;
+	}
+
+	.navClass {
+		justify-content: center;
+		margin-left: 0;
+	}
+
+	.navClass ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.profileInner {
+		margin-left: 0;
+		margin-top: 10px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.profileTopLeft {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	#name {
+		font-size: 1.8em;
+	}
+
+	.proffesion {
+		font-size: 1em;
+	}
+
+	.introduction {
+		font-size: 18px;
+	}
+}

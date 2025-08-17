@@ -1,0 +1,419 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #13171f;
+	font-family: Arial, sans-serif;
+	color: #fff;
+}
+
+.mainContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ========== HEADER / NAVBAR ========== */
+nav {
+	background-color: #13171f;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.navLinks {
+	display: flex;
+	gap: 2rem;
+}
+
+.navLinks ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	list-style: none;
+}
+
+.navLinks a {
+	color: #01aaff;
+	text-decoration: none;
+	font-size: 1.5em;
+	transition: color 0.3s;
+}
+
+.navLinks a:hover {
+	color: #00f7ff;
+}
+
+.menuToggle {
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: #01aaff;
+	display: none;
+	cursor: pointer;
+}
+
+.menuToggle:hover {
+	color: #00f7ff;
+}
+
+.mobileMenu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #10141b;
+	z-index: 1000;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.mobileMenu a {
+	color: #01aaff;
+	text-decoration: none;
+	font-size: 1.5em;
+	margin: 20px;
+	transition: color 0.3s;
+}
+
+.navClose ul {
+	list-style: none;
+}
+
+.navClose a:hover {
+	color: #00f7ff;
+}
+
+.mobileMenu .navClose ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	list-style: none;
+}
+
+.closeBtn {
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: #01aaff;
+	cursor: pointer;
+	z-index: 1100;
+}
+
+.closeBtn:hover {
+	color: #00f7ff;
+}
+
+.logoTopLeft {
+	margin-bottom: 1.5em;
+}
+
+.logoTopLeft img {
+	width: 4.5em;
+	height: 4.5em;
+	border-radius: 50%;
+	margin-left: 1.1rem;
+}
+
+.logoInner {
+	display: flex;
+	flex-direction: column;
+	margin-left: 80px;
+	margin-top: -60px;
+}
+
+#websiteName {
+	font-size: 2em;
+	color: #fff;
+	margin-left: 1.1rem;
+	font-weight: bold;
+}
+
+.logoSubtitle {
+	color: #7b8495;
+	font-size: 1.2em;
+	margin-left: 1.1rem;
+}
+
+.banner {
+	text-align: center;
+	padding: 4rem 1rem 2.5rem 1rem;
+	background: linear-gradient(90deg, #01aaff30, #00f7ff20);
+}
+
+#bannerTitle {
+	font-weight: 700;
+	font-size: 2.6rem;
+	margin-bottom: 1rem;
+	letter-spacing: 1px;
+}
+#bannerSubtitle {
+	font-weight: 400;
+	font-size: 1.18rem;
+	color: #c2e4ff;
+	margin-bottom: 2rem;
+}
+
+.bannerBtn {
+	background: #01aaff;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.08rem;
+	padding: 15px 40px;
+	border: none;
+	border-radius: 32px;
+	box-shadow: 0 2px 12px #01aaff33;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+.bannerBtn:hover {
+	background: #00f7ff;
+	color: #151a26;
+}
+
+.featuresSection {
+	padding: 3rem 1rem 2rem 1rem;
+}
+
+.featuresTitle {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.featuresSubtitle {
+	text-align: center;
+	color: #7b8495;
+	margin-bottom: 2.3rem;
+}
+
+.featuresGrid {
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.featureCard {
+	background: #181e29;
+	border-radius: 14px;
+	box-shadow: 0 4px 24px #151a2625;
+	padding: 36px 22px 24px 22px;
+	width: 265px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.featureCard .emoji {
+	font-size: 2.2rem;
+	margin-bottom: 15px;
+}
+
+.featureCard h2 {
+	font-size: 1.18rem;
+	color: #01aaff;
+	margin-bottom: 0.7rem;
+}
+
+.featureCard ul {
+	list-style: none;
+	color: #c2e4ff;
+	font-size: 1rem;
+}
+
+.featureCard ul li {
+	margin-bottom: 0.6rem;
+}
+
+.ctaBanner {
+	background: #01aaff;
+	margin: 3rem 0 0 0;
+	padding: 2rem 1rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 18px;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.ctaBtn {
+	background: #01aaff;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.08rem;
+	padding: 15px 40px;
+	border: none;
+	border-radius: 32px;
+	box-shadow: 0 2px 12px #01aaff33;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-top: 18px;
+}
+
+.ctaBtn:hover {
+	background: #00f7ff;
+	color: #151a26;
+}
+
+footer {
+	background-color: #1a1f28;
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0%;
+	padding: 1rem 2rem;
+	background-color: #1a1f28;
+	color: #fff;
+}
+
+.footerText {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.footerQuote,
+.location,
+.copyRight {
+	font-size: 0.9rem;
+	color: #7b8495;
+}
+
+.socialLinks {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+}
+
+.socialLinks li a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #7b8495;
+	transition: color 0.3s ease;
+	display: flex;
+	align-items: center;
+}
+
+.socialLinks li a:hover {
+	color: #ffffff;
+}
+
+.socialIcon {
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	margin-right: 4px;
+	filter: grayscale(100%) brightness(1.5);
+	transition: filter 0.3s;
+}
+
+.socialLinks li a:hover .socialIcon {
+	filter: none;
+}
+
+@media screen and (max-width: 480px) {
+	.footerContainer {
+		padding: 1rem;
+	}
+
+	.socialLinks {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.socialIcon {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navLinks {
+		display: none;
+	}
+
+	.menuToggle {
+		display: block;
+	}
+
+	.navClass {
+		justify-content: center;
+		margin-left: 0;
+	}
+
+	.navClass ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.logoInner {
+		margin-left: 0;
+		margin-top: 10px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.logoTopLeft {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	#websiteName {
+		font-size: 1.8em;
+	}
+
+	.logoSubtitle {
+		font-size: 1em;
+	}
+
+	.featuresGrid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.featureCard {
+		width: 90vw;
+	}
+
+	#featuresTitle {
+		font-size: 1.7rem;
+	}
+
+	.ctaBanner {
+		font-size: 1.1rem;
+	}
+
+	.footerContainer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1.5rem;
+	}
+
+	.footerText {
+		align-items: center;
+	}
+}

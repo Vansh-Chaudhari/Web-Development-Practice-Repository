@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #13171f;
+	font-family: Arial, sans-serif;
+}
+
+.hrClass {
+	border-color: #202632;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.mainContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.titleCotainer {
+	display: flex;
+	flex-direction: column;
+}
+.title {
+	font-size: 2em;
+	color: #fff;
+	margin-left: 1.1rem;
+}
+
+.subTitle {
+	color: #7b8495;
+	font-size: 1.2em;
+	margin-left: 1.1rem;
+}
+
+.emoji {
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+.projects {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: #cdcccc;
+	line-height: 1.6;
+	padding: 40px 20px;
+	max-width: 1200px;
+	margin: auto;
+}
+
+#projects {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: #cdcccc;
+	line-height: 1.6;
+	padding: 40px 20px;
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* 📌 EXPLAINED: Why max 3 project cards are shown in one row
+
+1️⃣ The parent container `.projects` has:
+   max-width: 1200px;
+   → This means no matter how big the screen is (like 1600px or 2000px),
+     the content inside `.projects` will never go beyond 1200px width.
+
+2️⃣ Inside `.projects`, we have:
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   → This line creates as many columns as possible using min width of 280px per item.
+
+3️⃣ Let's calculate:
+   Total space = 1200px (max)
+   Minimum per item = 280px
+   Plus some `gap: 20px` between grid items
+
+   So approx:
+   280 (item) + 20 (gap) = ~300px per item block
+   1200 / 300 = 4 → But due to padding and gap, only **3 items fit per row** properly.
+
+4️⃣ That’s why:
+   ✅ Even if screen size is very large (like 2000px),
+      grid will not go beyond 1200px, so only 3 projects/cards fit in a row.
+   ✅ On smaller screens, the grid will adjust and show 1 or 2 per row.
+
+📌 Summary: 
+→ `max-width` limits total space.
+→ `auto-fit` tries to fit as many 280px-wide items as possible.
+→ Gaps and padding reduce the available space.
+→ So final result = only 3 items per row at max width.
+*/
+
+.projectGridContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+.projectGridCard {
+	background-color: #181e29;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectGridCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projectGridCard img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+.projectGridCard h3 {
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.projectGridCard p {
+	font-size: 1.2rem;
+	color: #f1f1f1;
+}
+
+.summary {
+	font-size: 1.2rem;
+	color: #a0aec0;
+}
+
+.summary:hover {
+	color: #565d69;
+}
+
+.projectLinks {
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+.projectLinks a {
+	color: #01aaff;
+	text-decoration: none;
+	margin: 0 5px;
+	transition: color 0.3s ease;
+}
+
+.projectLinks a:hover {
+	text-decoration: underline;
+	color: hsl(182, 100%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+	.titleCotainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.emoji {
+		font-size: 1rem;
+	}
+
+	.projectLinks {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+		font-size: 22px;
+	}
+}

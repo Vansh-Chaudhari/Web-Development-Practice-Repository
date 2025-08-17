@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>WebMaster - Landing Page</title>
+	</head>
+	<body>
+		<div class="mainContainer">
+			<header>
+				<nav>
+					<div class="navLinks">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#contacts">Contact</a></li>
+						</ul>
+					</div>
+					<button class="menuToggle" onclick="openMenu()">☰</button>
+				</nav>
+
+				<div class="mobileMenu" id="mobileMenuId">
+					<button class="closeBtn" onclick="closeMenu()">✖</button>
+					<div class="navClose">
+						<ul>
+							<li><a href="#home" onclick="closeMenu()">Home</a></li>
+							<li><a href="#features" onclick="closeMenu()">Features</a></li>
+							<li><a href="#contacts" onclick="closeMenu()">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="logoTopLeft">
+					<img src="assets/images/logo-image.png" alt="Logo Photo" />
+				</div>
+				<div class="logoInner">
+					<h1 id="websiteName">WebMaster</h1>
+					<p class="logoSubtitle">Build a Stunning Web Presence</p>
+				</div>
+				<hr class="hrClass" />
+			</header>
+
+			<main>
+				<section class="banner">
+					<p id="bannerTitle">Unlock Your Digital Potential</p>
+					<p id="bannerSubtitle">
+						Create, launch and grow your website with ease—no coding required.
+						Start your online project in minutes!
+					</p>
+					<button class="bannerBtn">Get Started</button>
+				</section>
+
+				<!-- FEATURES -->
+				<section class="featuresSection" id="features">
+					<div class="featuresTitle">Why Choose WebMaster?</div>
+					<div class="featuresSubtitle">
+						Everything you need for a professional website
+					</div>
+					<div class="featuresGrid">
+						<div class="featureCard">
+							<div class="emoji">💡</div>
+							<h2>Easy Drag & Drop</h2>
+							<ul>
+								<li>No code required</li>
+								<li>Arrange and style instantly</li>
+								<li>Live preview</li>
+							</ul>
+						</div>
+						<div class="featureCard">
+							<div class="emoji">🎨</div>
+							<h2>Modern Templates</h2>
+							<ul>
+								<li>Beautiful color palettes</li>
+								<li>Responsive layouts</li>
+								<li>Customizable components</li>
+							</ul>
+						</div>
+						<div class="featureCard">
+							<div class="emoji">⚡</div>
+							<h2>Fast & Secure</h2>
+							<ul>
+								<li>Optimal performance</li>
+								<li>SSL-secured out of box</li>
+								<li>24/7 support</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA BANNER -->
+				<div class="ctaBanner">
+					Ready to start building? <br />
+					<button class="ctaBtn">Launch My Site</button>
+				</div>
+			</main>
+
+			<!-- FOOTER -->
+			<footer>
+				<div class="footerContainer">
+					<div class="footerText">
+						<p class="footerQuote">“Building with purpose, not just pixels.”</p>
+						<p class="location">📍 Dhule, Maharashtra — IST (UTC+5:30)</p>
+						<p class="copyRight">
+							© 2025 Vansh Chaudhari. All rights reserved.
+						</p>
+					</div>
+					<ul class="socialLinks">
+						<li>
+							<a
+								href="https://www.linkedin.com/in/yourprofile"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="LinkedIn"
+								aria-label="Visit my LinkedIn profile"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=Ceo5wAFAEmmf&format=png&color=7b8495"
+									alt="LinkedIn"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								LinkedIn
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://github.com/yourusername"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="GitHub"
+								aria-label="Visit my GitHub"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=zehXPLJSAbBB&format=png&color=7b8495"
+									alt="GitHub"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								GitHub
+							</a>
+						</li>
+						<li>
+							<a
+								href="mailto:youremail@example.com"
+								title="Email"
+								aria-label="Send me an email"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=7X2DNQH7dVDS&format=png&color=7b8495"
+									alt="Email"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								Email
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script>
+		function openMenu() {
+			document.getElementById("mobileMenuId").style.display = "flex";
+		}
+
+		function closeMenu() {
+			document.getElementById("mobileMenuId").style.display = "none";
+		}
+	</script>
+</html>

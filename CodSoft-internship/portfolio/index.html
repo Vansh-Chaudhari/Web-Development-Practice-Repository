@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Portfolio Website</title>
+	</head>
+	<body>
+		<div class="mainContainer">
+			<header>
+				<nav>
+					<div class="navLinks">
+						<ul>
+							<li><a href="#about">About</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#contacts">Contact</a></li>
+						</ul>
+					</div>
+					<button class="menuToggle" onclick="openMenu()">☰</button>
+				</nav>
+
+				<div class="mobileMenu" id="mobileMenuId">
+					<button class="closeBtn" onclick="closeMenu()">✖</button>
+					<div class="navClose">
+						<ul>
+							<li><a href="#about" onclick="closeMenu()">About</a></li>
+							<li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+							<li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+							<li><a href="#contacts" onclick="closeMenu()">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="profileTopLeft">
+					<img src="assets/images/profile-photo.jpg" alt="Profile Photo" />
+				</div>
+				<div class="profileInner">
+					<p id="name">Vansh Chaudhari</p>
+					<p class="proffesion">Mern Stack Developer</p>
+				</div>
+				<hr class="hrClass" />
+
+				<p class="introduction">
+					I'm Vansh Chaudhari, a Diploma graduate in Computer Engineering with a
+					strong passion for web development and backend technologies. I enjoy
+					building practical, real-world projects and constantly expanding my
+					skill set. Currently, I'm focused on mastering the MERN stack and
+					strengthening my Data Structures and Algorithms (DSA) skills using
+					Python.
+				</p>
+			</header>
+			<main>
+				<section id="about">
+					<div class="titleCotainer">
+						<h2 class="title">About Me</h2>
+						<p class="subTitle">
+							Turning ideas into Code with MERN Stack & Python DSA
+						</p>
+					</div>
+					<hr class="hrClass" />
+					<div class="aboutContainer">
+						<div class="aboutImg">
+							<img
+								src="assets/images/profile-photo.jpg"
+								alt="Vansh Chaudhari"
+							/>
+						</div>
+						<div class="aboutText">
+							<p>
+								I'm <strong>Vansh Chaudhari</strong>, a passionate and
+								self-driven developer currently learning
+								<strong>Data Structures and Algorithms (DSA) in Python</strong>
+								and building strong foundations in
+								<strong>Full Stack Web Development using the MERN stack</strong>
+								(MongoDB, Express, React, Node.js).
+							</p>
+							<p>
+								I have hands-on experience through a
+								<strong
+									>6-week Full Stack Development internship at Sumango</strong
+								>, and I'm currently enhancing my web development skills through
+								an internship at <strong>CodSoft</strong>.
+							</p>
+							<p><strong>Skills:</strong> HTML, CSS, JavaScript, Python</p>
+						</div>
+					</div>
+					<div class="buttons">
+						<a class="buttonClass" href="#contacts" role="button">Contact me</a>
+						<a
+							class="buttonClass"
+							role="button"
+							href="assets/vansh-resume.pdf"
+							download="Vansh-Chaudhari-Resume.pdf"
+							>Resume</a
+						>
+					</div>
+				</section>
+				<section id="projects">
+					<div class="titleCotainer">
+						<h2 class="title">My Projects</h2>
+						<p class="subTitle">
+							Practical Applications of My Learning and Experience
+						</p>
+					</div>
+					<hr class="hrClass" />
+					<div class="projectGridContainer">
+						<!-- Project Cart 1 -->
+						<div class="projectGridCard">
+							<img
+								src="assets/images/mobile-friendly-portfolio-site.jpg"
+								alt="Mobile-Friendly Portfolio Site"
+							/>
+							<h3>Mobile-Friendly Portfolio Site</h3>
+							<p>
+								A <strong>responsive portfolio website</strong> built from
+								scratch during my <strong>CodSoft internship</strong>, inspired
+								by the <strong>neog.camp portfolio</strong>. Includes four
+								sections — <strong>About</strong>, <strong>Projects</strong>,
+								<strong>Skills</strong>, and <strong>Contact</strong> — with
+								mobile-friendly navigation.
+							</p>
+
+							<details>
+								<summary><strong>Features of this project</strong></summary>
+								<ul>
+									<li><strong>Responsive design</strong> (320px–1200px)</li>
+									<li>Four main sections with smooth navigation</li>
+									<li>Project showcase with 3 projects</li>
+									<li>JavaScript button to hide nav on small screens</li>
+									<li>Contact & Resume download buttons</li>
+								</ul>
+							</details>
+							<hr class="hrClass" />
+							<div class="projectLinks">
+								<a href="https://demo-link.com" target="_blank"
+									><span class="emoji"> 🖥️ </span>Live Demo</a
+								>
+								<a href="https://github.com/project" target="_blank"
+									><span class="emoji"> ⚙️ </span>Source Code</a
+								>
+							</div>
+						</div>
+						<!-- Project Cart 2 -->
+						<div class="projectGridCard">
+							<img
+								src="assets/images/portfolio-website-neogcamp.png"
+								alt="Portfolio Website NeoG Camp"
+							/>
+							<h3>Portfolio Website NeoG Camp</h3>
+							<p>
+								A <strong>personal portfolio</strong> built during
+								<strong>neog.camp Level 0</strong> using <strong>HTML</strong>,
+								<strong>CSS</strong>, and <strong>JavaScript</strong>. Showcases
+								multiple mini projects with light and dark mode support.
+							</p>
+
+							<details>
+								<summary><strong>Features of this project</strong></summary>
+								<ul>
+									<li>Four sections: About, Projects, Skills, and Connect</li>
+									<li>5 mini projects showcased</li>
+									<li>Light & dark mode toggle</li>
+									<li>Clean, beginner-friendly code structure</li>
+								</ul>
+							</details>
+							<hr class="hrClass" />
+							<div class="projectLinks">
+								<a href="https://demo-link.com" target="_blank">🖥️Live Demo</a>
+								<a href="https://github.com/project" target="_blank"
+									><span class="emoji"> ⚙️ </span>Source Code</a
+								>
+							</div>
+						</div>
+						<!-- Project Cart 3 -->
+						<div class="projectGridCard">
+							<img
+								src="assets/images/myntra-homepage-clone.png"
+								alt="Myntra Homepage Clone"
+							/>
+							<h3>Myntra Homepage Clone</h3>
+							<p>
+								A <strong>Myntra homepage clone</strong> built using
+								<strong>HTML</strong> and <strong>CSS</strong> to practice
+								<strong>semantic tags</strong> and styling. Focused on
+								replicating layout and improving HTML/CSS fundamentals.
+							</p>
+
+							<details>
+								<summary><strong>Features of this project</strong></summary>
+								<ul>
+									<li>Semantic HTML structure</li>
+									<li>Styled header, banner, categories, and footer</li>
+									<li>Organized CSS for easy updates</li>
+									<li>Learning-focused, non-responsive layout</li>
+								</ul>
+							</details>
+							<hr class="hrClass" />
+							<div class="projectLinks">
+								<a href="https://demo-link.com" target="_blank"
+									><span class="emoji"> 🖥️ </span>Live Demo</a
+								>
+								<a href="https://github.com/project" target="_blank"
+									><span class="emoji"> ⚙️ </span>Source Code</a
+								>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="skills">
+					<div class="titleCotainer">
+						<h2 class="title">Skills</h2>
+						<p class="subTitle">My Current Skills & Learning Path</p>
+					</div>
+					<hr class="hrClass" />
+					<div class="skillGridContainer">
+						<div class="skillGridCard">
+							<div class="skillTitleCotainer">
+								<h3 class="skillTitle">
+									<span class="emoji">💻</span> Frontend
+								</h3>
+								<p class="skillSubTitle">Current Skills:</p>
+							</div>
+
+							<div class="skillList">
+								<ul>
+									<li>
+										HTML5 (<span class="emoji">✅</span> Completed - Latest
+										Syntax)
+									</li>
+									<li>
+										CSS3 (<span class="emoji">✅</span> Completed - Flexbox,
+										Grid, Responsive Design)
+									</li>
+									<li>
+										JavaScript (<span class="emoji">🟡 </span> Currently
+										Learning)
+									</li>
+									<li>
+										Bootstrap (<span class="emoji">🔜 </span> to be learned
+										soon)
+									</li>
+									<li>
+										React.js (<span class="emoji">🔜 </span> planned to learn)
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="skillGridCard">
+							<div class="skillTitleCotainer">
+								<h3 class="skillTitle">
+									<span class="emoji">🖥️ </span> Backend & Tools
+								</h3>
+								<p class="skillSubTitle">Learning Path (Planned):</p>
+							</div>
+
+							<div class="skillList">
+								<ul>
+									<li>Node.js(<span class="emoji">🔜 </span> Planned)</li>
+									<li>Express.js(<span class="emoji">🔜 </span> Planned)</li>
+									<li>MongoDB(<span class="emoji">🔜 </span> Planned)</li>
+									<li>MERN Stack(<span class="emoji">🔜 </span> Planned)</li>
+									<li>
+										RESTful APIs (<span class="emoji">🔜 </span> future topic)
+									</li>
+									<li>
+										Version Control: Git & GitHub (<span class="emoji"
+											><span class="emoji">✅</span>
+										</span>
+										Basic Use)
+									</li>
+									<li>
+										Code Editor: VS Code (<span class="emoji">✅</span> Familiar
+										Tool)
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="skillGridCard">
+							<div class="skillTitleCotainer">
+								<h3 class="skillTitle">
+									<span class="emoji">🧠 </span> Programming
+								</h3>
+								<p class="skillSubTitle">Current & Future Focus:</p>
+							</div>
+
+							<div class="skillList">
+								<ul>
+									<li>Python ((<span class="emoji">✅</span> Completed))</li>
+									<li>
+										DSA in Python (<span class="emoji">🟡 </span> Currently
+										Learning)
+									</li>
+									<li>
+										Problem Solving (<span class="emoji">🟡 </span> Basic)
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="skillGridCard">
+							<div class="skillTitleCotainer">
+								<h3 class="skillTitle">
+									<span class="emoji">🧠 </span> Core CS Subjects
+								</h3>
+								<p class="skillSubTitle">Future Focus:</p>
+							</div>
+
+							<div class="skillList">
+								<ul>
+									<li>OOPs Concept (<span class="emoji">🔜 </span> Planned)</li>
+									<li>
+										Basic DBMS (<span class="emoji">🔜 </span> In-depth in
+										Future)
+									</li>
+									<li>
+										Computer Networks & OS (<span class="emoji">🔜 </span>
+										Diploma Basic, Future Deep)
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="contacts">
+					<div class="titleCotainer">
+						<h2 class="title">Connect with Me</h2>
+						<p class="subTitle">
+							Available on the following platforms — let’s connect!
+						</p>
+					</div>
+					<hr class="hrClass" />
+					<div class="contactGridContainer">
+						<div class="contactGridCard">
+							<div class="contactTitleCotainer">
+								<h3 class="contactTitle">
+									<img
+										src="https://img.icons8.com/?size=24&id=7X2DNQH7dVDS&format=png&color=FFFFFF"
+										onerror="this.style.display='none';"
+									/>
+									Gmail
+								</h3>
+								<p class="contactSubTitle">Send me an email:</p>
+							</div>
+
+							<div class="contactList">
+								<ul>
+									<li>
+										<a href="mailto:vanshchaudhari9370@gmail.com"
+											>vanshchaudhari9370@gmail.com</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contactGridCard">
+							<div class="contactTitleCotainer">
+								<h3 class="contactTitle">
+									<img
+										src="https://img.icons8.com/?size=24&id=Ceo5wAFAEmmf&format=png&color=FFFFFF"
+										onerror="this.style.display='none';"
+									/>
+									LinkedIn
+								</h3>
+								<p class="contactSubTitle">Let's connect professionally:</p>
+							</div>
+
+							<div class="contactList">
+								<ul>
+									<li>
+										<a
+											href="https://www.linkedin.com/in/vansh-chaudhari9370/"
+											target="_blank"
+										>
+											Connect on LinkedIn
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="contactGridCard">
+							<div class="contactTitleCotainer">
+								<h3 class="contactTitle">
+									<img
+										src="https://img.icons8.com/?size=24&id=zehXPLJSAbBB&format=png&color=FFFFFF"
+										alt="GitHub logo"
+										onerror="this.style.display='none';"
+									/>
+									GitHub
+								</h3>
+								<p class="contactSubTitle">Check out my projects</p>
+							</div>
+
+							<div class="contactList">
+								<ul>
+									<li>
+										<a
+											href="https://github.com/Vansh-Chaudhari"
+											target="_blank"
+										>
+											View my GitHub</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<div class="footerContainer">
+					<div class="footerText">
+						<p class="footerQuote">“Building with purpose, not just pixels.”</p>
+						<p class="location">📍 Dhule, Maharashtra — IST (UTC+5:30)</p>
+						<p class="copyRight">
+							© 2025 Vansh Chaudhari. All rights reserved.
+						</p>
+					</div>
+					<ul class="socialLinks">
+						<li>
+							<a
+								href="https://www.linkedin.com/in/yourprofile"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="LinkedIn"
+								aria-label="Visit my LinkedIn profile"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=Ceo5wAFAEmmf&format=png&color=7b8495"
+									alt="LinkedIn"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								LinkedIn
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://github.com/yourusername"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="GitHub"
+								aria-label="Visit my GitHub"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=zehXPLJSAbBB&format=png&color=7b8495"
+									alt="GitHub"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								GitHub
+							</a>
+						</li>
+						<li>
+							<a
+								href="mailto:youremail@example.com"
+								title="Email"
+								aria-label="Send me an email"
+							>
+								<img
+									src="https://img.icons8.com/?size=48&id=7X2DNQH7dVDS&format=png&color=7b8495"
+									alt="Email"
+									class="socialIcon"
+									onerror="this.style.display='none';"
+								/>
+								Email
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<script>
+			function openMenu() {
+				document.getElementById("mobileMenuId").style.display = "flex";
+			}
+
+			function closeMenu() {
+				document.getElementById("mobileMenuId").style.display = "none";
+			}
+		</script>
+	</body>
+</html>

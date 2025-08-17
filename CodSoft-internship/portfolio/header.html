@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Header</title>
+		<link rel="stylesheet" href="css/header.css" />
+	</head>
+	<body>
+		<div class="mainContainer">
+			<header>
+				<nav>
+					<div class="navLinks">
+						<ul>
+							<li><a href="#about">About</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#contacts">Contact</a></li>
+						</ul>
+					</div>
+					<button class="menuToggle" onclick="openMenu()">☰</button>
+				</nav>
+
+				<div class="mobileMenu" id="mobileMenuId">
+					<button class="closeBtn" onclick="closeMenu()">✖</button>
+					<div class="navClose">
+						<ul>
+							<li><a href="#about" onclick="closeMenu()">About</a></li>
+							<li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+							<li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+							<li><a href="#contacts" onclick="closeMenu()">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="profileTopLeft">
+					<img src="assets/images/profile-photo.jpg" alt="Profile Photo" />
+				</div>
+				<div class="profileInner">
+					<p id="name">Vansh Chaudhari</p>
+					<p class="proffesion">Mern Stack Developer</p>
+				</div>
+				<hr class="hrClass" />
+
+				<p class="introduction">
+					I'm Vansh Chaudhari, a Diploma graduate in Computer Engineering with a
+					strong passion for web development and backend technologies. I enjoy
+					building practical, real-world projects and constantly expanding my
+					skill set. Currently, I'm focused on mastering the MERN stack and
+					strengthening my Data Structures and Algorithms (DSA) skills using
+					Python.
+				</p>
+			</header>
+
+			<main></main>
+
+			<footer></footer>
+		</div>
+	</body>
+
+	<script>
+		function openMenu() {
+			document.getElementById("mobileMenuId").style.display = "flex";
+		}
+
+		function closeMenu() {
+			document.getElementById("mobileMenuId").style.display = "none";
+		}
+	</script>
+</html>

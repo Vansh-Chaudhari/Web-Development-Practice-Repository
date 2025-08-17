@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Box Shadow Examples</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+.example { margin-bottom: 30px; }
+.box {
+  width: 150px;
+  height: 80px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+<h1>Box Shadow Step-by-Step</h1>
+
+<div class="example">
+  <h2>1. No Shadow</h2>
+  <div class="box" style="box-shadow: none;">No shadow</div>
+  <code>box-shadow: none;</code>
+</div>
+
+<div class="example">
+  <h2>2. Simple Shadow</h2>
+  <div class="box" style="box-shadow: 0 4px 8px rgba(0,0,0,0.3);">Simple</div>
+  <code>box-shadow: 0 4px 8px rgba(0,0,0,0.3);</code>
+</div>
+
+<div class="example">
+  <h2>3. Move Shadow (X, Y)</h2>
+  <div class="box" style="box-shadow: 10px 10px 8px rgba(0,0,0,0.3);">Right & Down</div>
+  <code>box-shadow: 10px 10px 8px rgba(0,0,0,0.3);</code>
+</div>
+
+<div class="example">
+  <h2>4. Blur</h2>
+  <div class="box" style="box-shadow: 10px 10px 0 rgba(0,0,0,0.3);">No blur</div>
+  <code>box-shadow: 10px 10px 0 rgba(0,0,0,0.3);</code>
+  <div class="box" style="box-shadow: 10px 10px 15px rgba(0,0,0,0.3);">Blur</div>
+  <code>box-shadow: 10px 10px 15px rgba(0,0,0,0.3);</code>
+</div>
+
+<div class="example">
+  <h2>5. Spread</h2>
+  <div class="box" style="box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);">Spread</div>
+  <code>box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);</code>
+</div>
+
+<div class="example">
+  <h2>6. Color</h2>
+  <div class="box" style="box-shadow: 0 0 15px rgba(255,0,0,0.5);">Red</div>
+  <code>box-shadow: 0 0 15px rgba(255,0,0,0.5);</code>
+</div>
+
+<div class="example">
+  <h2>7. Inset Shadow</h2>
+  <div class="box" style="box-shadow: inset 0 0 10px rgba(0,0,0,0.3);">Inset</div>
+  <code>box-shadow: inset 0 0 10px rgba(0,0,0,0.3);</code>
+</div>
+
+</body>
+</html>
