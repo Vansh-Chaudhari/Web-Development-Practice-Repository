@@ -246,6 +246,10 @@ nav {
 	padding: 2rem 1rem;
 	text-align: center;
 	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	border-radius: 18px;
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -356,12 +360,12 @@ footer {
 		display: block;
 	}
 
-	.navClass {
+	.navClose {
 		justify-content: center;
 		margin-left: 0;
 	}
 
-	.navClass ul {
+	.navClose ul {
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;

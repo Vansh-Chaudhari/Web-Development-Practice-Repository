@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cricket Game</title>
+		<link rel="stylesheet" href="cricket-game.css" />
+	</head>
+	<body>
+		<h1>Welcome to the Cricket Game!</h1>
+		<div class="buttons">
+			<button class="button" onclick="computerGeneratedChoice();	batChoice();">
+				Bat
+			</button>
+
+			<button class="button" onclick="computerGeneratedChoice();	ballChoice();">
+				Ball
+			</button>
+
+			<button
+				class="button"
+				onclick="computerGeneratedChoice();	stumpChoice();">
+				Stump
+			</button>
+		</div>
+	</body>
+	<script>
+		let computerChoice;
+		function computerGeneratedChoice() {
+			let randomNumber = Math.random() * 3;
+
+			if (randomNumber > 0 && randomNumber <= 1) {
+				computerChoice = "Bat";
+
+				if (computerChoice === "Bat") {
+					alert("Computer chose Bat. It's a Tie!");
+				} else if (computerChoice === "Ball") {
+					alert("Computer chose Ball. You Win!");
+				} else {
+					alert("Computer chose Stump. You Lose!");
+				}
+			} else if (randomNumber > 1 && randomNumber <= 2) {
+				computerChoice = "Ball";
+			
+				if (computerChoice === "Bat") {
+					alert("Computer chose Bat. You Lose!");
+				} else if (computerChoice === "Ball") {
+					alert("Computer chose Ball. It's a Tie!");
+				} else {
+					alert("Computer chose Stump. You Win!");
+				}
+			} else {
+				computerChoice = "Stump";
+
+				if (computerChoice === "Bat") {
+					alert("Computer chose Bat. You Win!");
+				} else if (computerChoice === "Ball") {
+					alert("Computer chose Ball. You Lose!");
+				} else {
+					alert("Computer chose Stump. It's a Tie!");
+				}
+			}
+		}
+	</script>
+</html>
